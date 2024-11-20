@@ -112,7 +112,7 @@ git clone <url> //克隆一个远程仓库
 	git merge --no-ff -m "message" <branch-name>
 ```
 
-![](.\GIT\合并1.png)
+![](main/GIT/合并1.png)
 
 ```
 	git merge --ff -m "message" <branch-name>
