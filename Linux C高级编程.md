@@ -202,7 +202,7 @@ gcc hello.o -o hello   会产生hello可执行文件.(绿色 )
 
 **进程三个状态的转换关系**
 
-![](Linux C高级编程.assets/1.png)
+![1](Linux C高级编程.assets/1.png)
 
 引起进程状态转换的具体原因如下：
 
@@ -258,7 +258,7 @@ sudo ctags -R
 ps -ajx
 ~~~
 
-![](Linux C高级编程.assets/2.png)
+![2](Linux C高级编程.assets/2.png)
 
 PPID：当前进程的父进程的进程号 
 
