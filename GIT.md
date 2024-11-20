@@ -118,7 +118,7 @@ git clone <url> //克隆一个远程仓库
 	git merge --ff -m "message" <branch-name>
 ```
 
-![合并2](GIT\合并2.png)
+![合并2](GIT/合并2.png)
 
 合并&squash 所有提交到一个提交
 
@@ -137,7 +137,7 @@ git checkout <dev>
 git rebase <main>
 ```
 
-![](E:\Embedded\笔记\word笔记\GIT\Rebase1.png)
+![Rebase1](GIT/Rebase1.png)
 
 #### 	五、撤销
 
