@@ -258,7 +258,7 @@ sudo ctags -R
 ps -ajx
 ~~~
 
-![2](Linux C高级编程.assets/2.png)
+![2](LinuxC高级编程.assets/2.png)
 
 PPID：当前进程的父进程的进程号 
 
@@ -339,7 +339,7 @@ man getpid    man getpgid
 
 
 
-![3](Linux C高级编程.assets/3.png)
+![3](LinuxC高级编程.assets/3.png)
 
 ## 2.2进程的创建fork函数
 
@@ -367,7 +367,7 @@ man getpid    man getpgid
 
   **fork函数执行完毕后父子进程的空间示意图：**
 
-![4](Linux C高级编程.assets/4.png)
+![4](LinuxC高级编程.assets/4.png)
 
 
 
@@ -455,7 +455,7 @@ int main(){
 
 ps axf   查看进程关系如图所示:
 
-![5](Linux C高级编程.assets/5.png)
+![5](LinuxC高级编程.assets/5.png)
 
 ./a.out    >  /home/liayin/temp/out  
 
@@ -465,7 +465,7 @@ ps axf   查看进程关系如图所示:
 
  \n对文件流不起作用, 应该在fork之前加上fflush(NULL),刷新所有的流.
 
-![6](Linux C高级编程.assets/6.png)
+![6](LinuxC高级编程.assets/6.png)
 
 ### 3.父进程拥有独立的地址空间.
 
@@ -507,7 +507,7 @@ int main(){
 
 执行结果:
 
-![7](Linux C高级编程.assets/7.png)
+![7](LinuxC高级编程.assets/7.png)
 
 ### 4.子进程继承父进程的空间,
 
@@ -561,7 +561,7 @@ int main(){
 
 运行效果图:
 
-![8](Linux C高级编程.assets/8.png)
+![8](LinuxC高级编程.assets/8.png)
 
 ### 5.进程sleep 睡眠状态
 
@@ -799,7 +799,7 @@ exit会刷新缓冲区，但是_exit不会刷新缓冲区
 
 
 
-![9](Linux C高级编程.assets/9.png)
+![9](LinuxC高级编程.assets/9.png)
 
 ~~~c
 #include <stdio.h>
@@ -1012,7 +1012,7 @@ exec函数族，是由六个exec函数组成的。
 
 exec函数族取代调用进程的数据段、代码段和堆栈段
 
-![10](Linux C高级编程.assets/10.png)
+![10](LinuxC高级编程.assets/10.png)
 
 一个进程调用exec后，除了进程ID，进程还保留了下列特征不变： 
 
@@ -1196,7 +1196,7 @@ int main(int argc, char const *argv[])
 
 Linux操作系统支持的主要进程间通信的通信机制
 
-![11](Linux C高级编程.assets/11.png)
+![11](LinuxC高级编程.assets/11.png)
 
 **进程间通信的实质：** 
 
@@ -1236,7 +1236,7 @@ socket通信可以实现不同主机的进程间通信，其他六个只能在�
 
 在Linux下，要想查看这些信号和编码的对应关系，可使用命令：kill ­-l
 
-![12](Linux C高级编程.assets/12.png)
+![12](LinuxC高级编程.assets/12.png)
 
 信号是由当前系统已经定义好的一些标识，每一个标识都会在特定的场合使用并且都会对进程有一定的影响，当信号产生时，会让当前信号做出相应的操作。这些信号都是已经定义好的，我们不能自己再去创造，直接使用这些就可以
 
@@ -1637,7 +1637,7 @@ int main(){
 
 常见的可重入函数列表:
 
-![14](Linux C高级编程.assets/14.png)
+![14](LinuxC高级编程.assets/14.png)
 
 
 
@@ -1834,7 +1834,7 @@ int main(){
 
 任何一个进程在创建的时候，系统都会 给他分配4G的虚拟内存，分为3G的用户空间和1G 的内核空间，内核空间是所有进程公有的，**无名管道就是创建在内核空间的**，多个进程知道同一个无名管道的空间，就可以利用他来进行通信
 
-## ![13](Linux C高级编程.assets/13.png)
+## ![13](LinuxC高级编程.assets/13.png)
 
 无名管道虽然是在内核空间创建的，但是会给当前用户进程两个文件描述符，一个负责执行读操作，一个负责执行写操作**管道是最古老的UNIX IPC方式，其特点是:** 
 
@@ -2315,7 +2315,7 @@ int main(){
 }
 ~~~
 
-![15](Linux C高级编程.assets/15.png)
+![15](LinuxC高级编程.assets/15.png)
 
 查看默认值
 
@@ -2976,7 +2976,7 @@ int main(){
 
 每个进程都有一个地址空间和一个控制线程.
 
-![16](Linux C高级编程.assets/16.png)
+![16](LinuxC高级编程.assets/16.png)
 
 ### 6.1.1 线程和进程的比较
 
@@ -4013,13 +4013,13 @@ v为+1
 
 1.若用于**互斥**,几个进程或线程往往只设置一个信号量.
 
-![17](Linux C高级编程.assets/17.png)
+![17](LinuxC高级编程.assets/17.png)
 
 
 
 2.若用于同步操作,往往会设置多个信号量,并且安排不同的初始值,来实现它们之间的执行顺序.
 
-![18](Linux C高级编程.assets/18.png)
+![18](LinuxC高级编程.assets/18.png)
 
 ### 7.4.1 信号量的操作
 
@@ -4245,7 +4245,7 @@ OSI一共分为7层，TCP/IP协议族一共四层，虽然TCP/IP协议族层次�
 
 所有任务
 
-![19](Linux C高级编程.assets/19.png)
+![19](LinuxC高级编程.assets/19.png)
 
 应用层：应用程序间沟通的层 
 
@@ -4263,7 +4263,7 @@ OSI一共分为7层，TCP/IP协议族一共四层，虽然TCP/IP协议族层次�
 
 每层完成自己的任务，最终通过不同层次的处理完成数据的收发
 
-![20](Linux C高级编程.assets/20.png)
+![20](LinuxC高级编程.assets/20.png)
 
 
 
@@ -4355,13 +4355,13 @@ MAC地址,用于标识网络设备,类似于身份证号，且理论上全球唯
 
 如何查询ubuntu的mac地址：
 
-![21](Linux C高级编程.assets/21.png)
+![21](LinuxC高级编程.assets/21.png)
 
 如何查询windows的mac地址鼠标右键点击计算机右下角电脑图标，选择网络和共享中心，左边选择更改适配器设置，找 
 
 到自己联网的图标，双击打开，点击详细信息，即可找到对应的mac地址
 
-![22](Linux C高级编程.assets/22.png)
+![22](LinuxC高级编程.assets/22.png)
 
 ### **8.6 IP地址** 
 
@@ -4385,7 +4385,7 @@ ipv4一般使用点分十进制字符串来标识，比如192.168.3.103
 
 主机ID:IP地址中由子网掩码中0覆盖的连续位
 
-![23](Linux C高级编程.assets/23.png)
+![23](LinuxC高级编程.assets/23.png)
 
 #### **8.6.3 ip地址特点** 
 
@@ -4435,7 +4435,7 @@ A,B,C三类地址是最常用的
 
 主要用于局域网络内的主机联机规划
 
-![24](Linux C高级编程.assets/24.png)
+![24](LinuxC高级编程.assets/24.png)
 
 #### **8.6.6 回环ip地址** 
 
@@ -4565,7 +4565,7 @@ LSB：低地址
 
 MSB：高地址 
 
-![25](Linux C高级编程.assets/25.png)
+![25](LinuxC高级编程.assets/25.png)
 
 **如何判断当前系统的字节序：**
 
@@ -4826,7 +4826,7 @@ SOCK_RAW，原始套接字，对于其他层次的协议操作时需要使用这
 
 ### **2.3 UDP编程C/S架构**
 
-![26](Linux C高级编程.assets/26.png)
+![26](LinuxC高级编程.assets/26.png)
 
 **UDP网络编程流程：** 
 
@@ -5178,7 +5178,7 @@ UDP网络程序想要收取数据需什么条件？
 
 ### **5.1 C/S架构回顾**
 
-![27](Linux C高级编程.assets/27.png)
+![27](LinuxC高级编程.assets/27.png)
 
 ### **5.2 UDP客户端注意点** 
 
@@ -5358,7 +5358,7 @@ return 0;
 
 3、服务器被动链接，客户端是主动链接
 
-![28](Linux C高级编程.assets/28.png)
+![28](LinuxC高级编程.assets/28.png)
 
 **TCP编程流程** 
 
@@ -5744,11 +5744,11 @@ flags：标志位
 
 ### **5.2 三次握手**   lucy       jack
 
-![29](Linux C高级编程.assets/29.png)
+![29](LinuxC高级编程.assets/29.png)
 
 ### **5.3 四次挥手**
 
-![30](Linux C高级编程.assets/30.png)
+![30](LinuxC高级编程.assets/30.png)
 
 ## **六、TCP并发服务器** 
 
