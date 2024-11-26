@@ -202,7 +202,7 @@ gcc hello.o -o hello   会产生hello可执行文件.(绿色 )
 
 **进程三个状态的转换关系**
 
-![1](Linux C高级编程.assets/1.png)
+![1](LinuxC高级编程.assets/1.png)
 
 引起进程状态转换的具体原因如下：
 
